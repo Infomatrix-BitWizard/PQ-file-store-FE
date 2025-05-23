@@ -6,7 +6,7 @@ qis - псевдонім проекту Quantum Information Science
 .qis-input {
     display: flex;
     flex-direction: column;
-    width: 285px;
+    flex: 1;
 
     .qis-input__label {
         margin-left: 8px;
@@ -23,5 +23,15 @@ qis - псевдонім проекту Quantum Information Science
         line-height: 22px;
         border: 1px solid #D8E0F0;
         font-size: 13px;
+    }
+}
+
+.qis-input.clear {
+    .qis-input__input {
+        background: none;
+    }
+
+    .qis-input__input::placeholder {
+        color: white;
     }
 }

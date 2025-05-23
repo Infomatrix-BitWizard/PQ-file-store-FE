@@ -10,10 +10,17 @@ import React, { useState } from "react";
 import CreateGroupModal from "@/app/modules/dashboard/modals/CreateGroupModal";
 import TesseractModal from "@/app/modules/tesseract/TesseractModal";
 import CreateFolderModal from "@/app/modules/dashboard/modals/CreateFolderModal";
-import { addFilesSuccess, addFolderSuccess } from "@/app/modules/files-table/redux/files-table.slice";
+import { addFilesSuccess, addFolderSuccess, deleteFolder } from "@/app/modules/files-table/redux/files-table.slice";
 import UploadFileModal from "@/app/modules/dashboard/modals/UploadFileModal";
+import PopupContainer from "@/app/ui/popupContainer/popupContainer";
+import PopupButton from "@/app/ui/popupButton/PopupButton";
+import { IconButton } from "@mui/material";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import Popup from "@/app/ui/popup/Popup";
+import GroupUsersModal from "@/app/modules/group/GroupUsersModal";
 
 export default function SidebarMenu() {
+  const [isGroupUsersModalOpen, setIsGroupUsersModalOpen] = useState(false);
   const [isOpenCreateGroupModal, setIsOpenCreateGroupModal] = useState(false);
   const [isOpenCreateFolderModal, setIsOpenCreateFolderModal] = useState(false);
   const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
@@ -92,7 +99,15 @@ export default function SidebarMenu() {
           {groups.list.map((group) => (
             <div key={group.id} className="sidebar__menu-item sidebar__group-item">
               <Link href={`/dashboard/group?groupID=${group.id}`}>{group.name}</Link>
-              <FiMoreVertical className="sidebar__group-icon" />
+              <Popup
+                content={
+                  <PopupContainer>
+                    <PopupButton onClick={() => setIsGroupUsersModalOpen(true)}>Users</PopupButton>
+                  </PopupContainer>
+                }
+              >
+                <FiMoreVertical className="sidebar__group-icon" />
+              </Popup>
             </div>
           ))}
         </nav>
@@ -118,6 +133,12 @@ export default function SidebarMenu() {
       <TesseractModal
         isOpen={isOpenTesseractModal}
         onClose={setIsOpenTesseractModal}
+      />
+
+      <GroupUsersModal
+        isOpen={isGroupUsersModalOpen}
+        onClose={() => setIsGroupUsersModalOpen(false)}
+        uploaded={item => console.log("nbj")}
       />
     </>
   );

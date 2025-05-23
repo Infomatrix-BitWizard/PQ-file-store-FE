@@ -4,15 +4,17 @@ import "./button.css";
 
 interface ButtonProps {
   onClick?: () => void;
+  style?: any,
   children?: React.ReactNode;
   className?: string;
   componentType?: "button" | "label";
 }
 
-export const Button: React.FC<ButtonProps> = ({ children, onClick, className, componentType }) => {
+export const Button: React.FC<ButtonProps> = ({ style, children, onClick, className, componentType }) => {
   if (componentType === "label") {
     return (
       <label
+        style={style}
         onClick={onClick}
         className={classNames("qis-button white", className)}
       >
@@ -23,6 +25,7 @@ export const Button: React.FC<ButtonProps> = ({ children, onClick, className, co
 
   return (
       <button
+        style={style}
         onClick={onClick}
         className={classNames("qis-button white", className)}
       >

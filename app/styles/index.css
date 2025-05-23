@@ -42,3 +42,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #6f3a71;
 }
+
+.full-width {
+    width: 100%;
+}

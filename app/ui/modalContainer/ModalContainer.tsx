@@ -4,7 +4,7 @@ import React from "react";
 import "./modal-container.css";
 
 interface IModalContainerProps {
-  title: string;
+  title?: string;
   children?: React.ReactNode;
   buttons?: React.ReactNode;
 }
@@ -12,9 +12,9 @@ interface IModalContainerProps {
 const ModalContainer = ({ children, buttons, title }: IModalContainerProps) => {
   return (
     <div className={"modal-container"}>
-      <div className={"modal-container__title"}>{title}</div>
+      {title && <div className={"modal-container__title"}>{title}</div>}
       <div className={"modal-container__body"}>{children}</div>
-      <div className={"modal-container__buttons"}>{buttons}</div>
+      {buttons && <div className={"modal-container__buttons"}>{buttons}</div>}
     </div>
   );
 };
