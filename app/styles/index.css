@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "../../node_modules/tailwindcss/dist/lib.d.mts";
+
+/* Color system */
+:root {
+    --regular-pink: #EC6DFF;
+    --dark-pink: #A54CB2;
+    --regular-pink-opacity-10: #2a0e2d;
+
+    --regular-violet: #61196C;
+    --dark-violet: #502E55;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: black;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1E1E1E;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #905390;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6f3a71;
+}

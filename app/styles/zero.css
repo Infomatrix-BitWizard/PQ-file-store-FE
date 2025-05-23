@@ -1,0 +1,75 @@
+/* set box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* clear padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* clear margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* set body style */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  /*line-height: 1.5;*/
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+/* disable default styles to lists */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* disable text-decoration to a tag */
+a {
+  text-decoration: none;
+}
+
+/* img */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* article */
+article > * + * {
+  margin-top: 1em;
+}
+
+svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* imitation fonts in button and input */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
