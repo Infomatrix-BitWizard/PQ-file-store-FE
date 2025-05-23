@@ -17,17 +17,17 @@ interface IGroupUserModalProps {
 
 const GroupUserModal = ({ isOpen, onClose, uploaded }: IGroupUserModalProps) => {
   const [emailValue, setEmailValue] = useState<string>("");
-  const [listOpened, setListOpened] = useState<boolean>(true);
+  const [listOpened, setListOpened] = useState<boolean>(false);
   const [group, setGroup] = useState<any>();
 
   const searchParams = useSearchParams();
   const paramsGroupID = searchParams.get("groupID");
 
   useEffect(() => {
-    if (paramsGroupID) {
+    if (isOpen && paramsGroupID) {
       getGroupInfo(paramsGroupID);
     }
-  }, []);
+  }, [isOpen, paramsGroupID]);
 
   const getGroupInfo = async (id: string) => {
     try {

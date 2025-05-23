@@ -99,15 +99,7 @@ export default function SidebarMenu() {
           {groups.list.map((group) => (
             <div key={group.id} className="sidebar__menu-item sidebar__group-item">
               <Link href={`/dashboard/group?groupID=${group.id}`}>{group.name}</Link>
-              <Popup
-                content={
-                  <PopupContainer>
-                    <PopupButton onClick={() => setIsGroupUsersModalOpen(true)}>Users</PopupButton>
-                  </PopupContainer>
-                }
-              >
-                <FiMoreVertical className="sidebar__group-icon" />
-              </Popup>
+              <FiMoreVertical className="sidebar__group-icon" onClick={() => setIsGroupUsersModalOpen(true)} />
             </div>
           ))}
         </nav>
