@@ -1,8 +1,10 @@
 "use client";
 
 import "./styles/index.css";
+import { store } from "@/app/redux/store";
+import { Provider } from "react-redux";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import {ILayout} from '@/app/code/response';
+import { ILayout } from "@/app/code/models";
 
 const darkTheme = createTheme({
     palette: {
@@ -14,16 +16,18 @@ export default function RootLayout({
                                        children,
                                    }: ILayout) {
     return (
-        <html lang="en">
-        <body
-            className={`antialiased`}
-        >
-            <ThemeProvider theme={darkTheme}>
-                <div className="flex flex-col grow">{children}</div>
+      <html lang="en">
+      <body
+        className={`antialiased`}
+      >
+      <Provider store={store}>
+          <ThemeProvider theme={darkTheme}>
+              <div className="flex flex-col grow">{children}</div>
 
-                <div id="modal-root" />
-            </ThemeProvider>
-        </body>
-        </html>
+              <div id="modal-root" />
+          </ThemeProvider>
+      </Provider>
+      </body>
+      </html>
     );
 }
