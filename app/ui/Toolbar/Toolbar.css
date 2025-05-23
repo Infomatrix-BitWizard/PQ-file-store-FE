@@ -1,0 +1,39 @@
+.toolbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 76px;
+    margin: 25px auto;
+    flex-grow: 1;
+    max-width: 960px;
+    width: calc(100% - 50px);
+    padding: 0 24px 0 48px;
+    border-radius: 38px;
+}
+
+.company-name {
+    margin-left: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #EC6DFF;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+}
+
+.menu-item {
+    font-size: 16px;
+    font-weight: 500;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &.selected {
+        color: #eb6dff;
+        text-decoration: underline;
+    }
+}

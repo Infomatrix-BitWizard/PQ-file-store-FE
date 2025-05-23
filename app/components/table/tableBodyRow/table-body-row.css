@@ -1,0 +1,27 @@
+.table-body-row {
+  display: contents;
+
+  &:first-child {
+    .table-body-cell {
+      &:first-child {
+        border-top-left-radius: 10px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 10px;
+      }
+    }
+  }
+
+  &:last-child {
+    .table-body-cell {
+      &:first-child {
+        border-bottom-left-radius: 10px;
+      }
+
+      &:last-child {
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+}

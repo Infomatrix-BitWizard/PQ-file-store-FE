@@ -1,0 +1,90 @@
+.files-table {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #2D1531, #692F73);
+    height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+    font-size: 11px;
+    padding: 10px;
+}
+
+.files-table__header {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 36px 8px 28px;
+}
+
+.files-table__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 12px;
+    gap: 12px;
+    overflow-y: scroll;
+}
+
+.files-table__header-row,
+.files-table__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.files-table__row {
+    padding: 7px 16px;
+}
+
+.files-table__row {
+    border-radius: 8px;
+    border: 1px solid #F1F1F3;
+}
+
+.files-table__row:hover {
+    background-color: #C879C4;
+}
+
+.files-table__row.selected {
+    background-color: rgba(128, 0, 128, 0.5);
+}
+
+.files-table__header-cell,
+.files-table__cell {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+}
+
+.files-table__header-cell--icon,
+.files-table__cell--icon {
+    width: 20px;
+}
+
+.files-table__header-cell--actions,
+.files-table__cell--actions {
+    width: 100px;
+}
+
+.files-table__header-cell,
+.files-table__header-cell--icon,
+.files-table__header-cell--actions {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.files-table__cell-text {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.files-table__cell-actions {
+    justify-content: flex-end;
+    gap: 10px;
+}

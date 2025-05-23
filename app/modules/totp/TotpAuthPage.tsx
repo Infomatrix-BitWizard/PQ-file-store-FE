@@ -9,7 +9,6 @@ import { env } from "@/app/env";
 import { signIn } from "@/app/modules/auth/redux/auth.slice";
 import { Button } from "@/app/ui/button/Button";
 import { useForm } from "react-hook-form";
-import { IResponseData } from "@/app/models/response";
 
 const TotpAuthPage = () => {
   const dispatch = useDispatch();

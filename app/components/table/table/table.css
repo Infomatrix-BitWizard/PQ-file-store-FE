@@ -1,0 +1,17 @@
+.table-wrapper {
+  display: grid;
+  overflow-x: auto;
+}
+
+.table {
+  display: grid;
+  border-collapse: collapse;
+  /*grid-template-columns: minmax(150px, 1fr) minmax(150px, 1.67fr);*/
+  gap: 2px 0;
+  min-width: 100%;
+  padding: 2px 4px;
+  background-color: rgb(36, 36, 41);
+  border-radius: 12px;
+  border: 2px solid rgb(40, 40, 45);
+  min-height: 50px;
+}

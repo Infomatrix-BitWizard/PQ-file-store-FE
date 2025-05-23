@@ -11,8 +11,7 @@ import axios from "axios";
 import { env } from "@/app/env";
 import { signIn } from "@/app/modules/auth/redux/auth.slice";
 import { parseToken } from "@/app/modules/auth/helpers/parseToken";
-import {Button} from "@/app/ui/button/Button";
-import { IResponseData } from "@/app/models/response";
+import { Button } from "@/app/ui/button/Button";
 
 interface FormValues {
   login: string;
@@ -97,7 +96,7 @@ const SingInPage = () => {
               {errors.password && <span className="errors">{errors.password.message}</span>}
             </div>
 
-            <Button onClick={handleSubmit(onSubmit)}>Submit</Button>
+            <Button className={"primary"} onClick={handleSubmit(onSubmit)}>Submit</Button>
           </form>
         </div>
       </div>

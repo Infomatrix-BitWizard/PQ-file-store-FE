@@ -1,3 +1,3 @@
-export interface ILayout {
+interface ILayout {
   children: React.ReactNode;
 }

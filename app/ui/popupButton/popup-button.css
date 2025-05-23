@@ -1,0 +1,18 @@
+.popup-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+
+  font-size: 14px;
+  color: #fff;
+  user-select: none;
+
+  &:hover {
+    background-color: rgb(56, 56, 66);
+  }
+}

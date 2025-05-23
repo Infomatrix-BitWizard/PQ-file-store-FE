@@ -1,0 +1,26 @@
+.profile-caption {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 24px;
+    padding: 12px 24px;
+    gap: 50px;
+    height: 195px;
+    background: linear-gradient(to bottom, #2D1531, #5B2664);
+}
+
+.profile-caption__credentials {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile-caption__credentials-name {
+    font-size: 29px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.profile-caption__credentials-role {
+    font-size: 18px;
+}

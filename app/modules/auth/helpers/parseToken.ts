@@ -1,5 +1,3 @@
-import {ITokenData} from '../auth.api';
-
 export const parseToken = (token: string) => {
   try {
     const base64Url = token.split(".")[1];
