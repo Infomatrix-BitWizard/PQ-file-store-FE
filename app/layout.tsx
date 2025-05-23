@@ -4,7 +4,7 @@ import "./styles/index.css";
 import { store } from "@/app/redux/store";
 import { Provider } from "react-redux";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { ILayout } from "@/app/code/models";
+import { ILayout }  from "@/app/interfaces/layout";
 
 const darkTheme = createTheme({
     palette: {

@@ -12,7 +12,7 @@ import { env } from "@/app/env";
 import { signIn } from "@/app/modules/auth/redux/auth.slice";
 import { parseToken } from "@/app/modules/auth/helpers/parseToken";
 import {Button} from "@/app/ui/button/Button";
-import {IResponseData} from '@/app/code/models';
+import { IResponseData } from "@/app/models/response";
 
 interface FormValues {
   login: string;

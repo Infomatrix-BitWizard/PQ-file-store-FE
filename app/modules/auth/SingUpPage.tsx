@@ -9,7 +9,7 @@ import { Button } from "@/app/ui/button/Button";
 import { useRouter } from "next/navigation";
 import { IResponseData } from "@/app/models/response";
 
-const SingInPage = () => {
+const SignUpPage = () => {
   const [nameValue, setNameValue] = useState("Vlad");
   const [loginValue, setLoginValue] = useState("Vlad@email.com");
   const [passwordValue, setPasswordValue] = useState("P@ssword1");
@@ -77,4 +77,4 @@ const SingInPage = () => {
   );
 };
 
-export default SingInPage;
+export default SignUpPage;
