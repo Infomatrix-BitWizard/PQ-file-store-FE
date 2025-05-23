@@ -130,7 +130,6 @@ export default function SidebarMenu() {
       <GroupUsersModal
         isOpen={isGroupUsersModalOpen}
         onClose={() => setIsGroupUsersModalOpen(false)}
-        uploaded={item => console.log("nbj")}
       />
     </>
   );

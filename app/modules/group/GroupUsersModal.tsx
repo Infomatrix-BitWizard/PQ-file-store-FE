@@ -12,16 +12,15 @@ import { env } from "@/app/env";
 interface IGroupUserModalProps {
   isOpen: boolean;
   onClose: (closed: boolean) => void;
-  uploaded?: (data: any) => void;
 }
 
-const GroupUserModal = ({ isOpen, onClose, uploaded }: IGroupUserModalProps) => {
+const GroupUserModal = ({ isOpen, onClose }: IGroupUserModalProps) => {
   const [emailValue, setEmailValue] = useState<string>("");
   const [listOpened, setListOpened] = useState<boolean>(false);
   const [group, setGroup] = useState<any>();
 
   const searchParams = useSearchParams();
-  const paramsGroupID = searchParams.get("groupID");
+  // const paramsGroupID = searchParams.get("groupID");
 
   useEffect(() => {
     if (isOpen && paramsGroupID) {
@@ -36,6 +35,7 @@ const GroupUserModal = ({ isOpen, onClose, uploaded }: IGroupUserModalProps) => 
         url: `${env.url}/groups/id?groupID=${id}`
       });
       setGroup(resp.data.data);
+      console.log(resp.data.data.users);
     } catch (err) {
       console.error(err);
     }
