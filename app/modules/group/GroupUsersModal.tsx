@@ -20,7 +20,7 @@ const GroupUserModal = ({ isOpen, onClose }: IGroupUserModalProps) => {
   const [group, setGroup] = useState<any>();
 
   const searchParams = useSearchParams();
-  // const paramsGroupID = searchParams.get("groupID");
+  const paramsGroupID = searchParams.get("groupID");
 
   useEffect(() => {
     if (isOpen && paramsGroupID) {
