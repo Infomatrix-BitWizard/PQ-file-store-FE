@@ -12,7 +12,7 @@ export class AES {
       const iv = forge.random.getBytesSync(16);
       const key = forge.util.decode64(keyBase64)
 
-      const cipher = forge.cipher.createCipher("AES-CBC", key);
+      const cipher = forge.cipher.createCipher("AES-GCM", key);
 
       cipher.start({ iv });
       cipher.update(forge.util.createBuffer(data));
@@ -31,7 +31,7 @@ export class AES {
       const key = forge.util.decode64(keyBase64);
       const encryptedData = forge.util.hexToBytes(encryptedDataBase64);
 
-      const decipher = forge.cipher.createDecipher("AES-CBC", key);
+      const decipher = forge.cipher.createDecipher("AES-GCM", key);
       decipher.start({ iv });
       decipher.update(forge.util.createBuffer(encryptedData));
 
