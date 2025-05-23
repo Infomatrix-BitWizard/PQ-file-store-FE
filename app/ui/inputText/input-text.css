@@ -1,0 +1,27 @@
+
+/**
+qis - псевдонім проекту Quantum Information Science
+ */
+
+.qis-input {
+    display: flex;
+    flex-direction: column;
+    width: 285px;
+
+    .qis-input__label {
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .qis-input__input {
+        background: #29112D;
+        padding: 12px;
+        border-radius: 12px;
+        line-height: 22px;
+        border: 1px solid #D8E0F0;
+        font-size: 13px;
+    }
+}

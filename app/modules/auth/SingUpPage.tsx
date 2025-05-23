@@ -7,6 +7,7 @@ import axios from "axios";
 import { InputText } from "@/app/ui/inputText/InputText";
 import { Button } from "@/app/ui/button/Button";
 import { useRouter } from "next/navigation";
+import { IResponseData } from "@/app/models/response";
 
 const SingInPage = () => {
   const [nameValue, setNameValue] = useState("Vlad");
